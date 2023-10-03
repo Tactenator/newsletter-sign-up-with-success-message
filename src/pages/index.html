@@ -13,20 +13,22 @@
   <!-- Sign-up form start -->
   <div id="container" class="flex flex-row bg-white justify-around p-5 rounded-xl m-auto">
     <div id="text-container" class="flex flex-col gap-5 items-start px-10 py-16 w-1/2">
-      <h1 class="text-4xl font-bold">Stay Updated!</h1>
+      <h1 class="text-[3rem] font-bold">Stay Updated!</h1>
 
-      <h4 class="">Join 60,000+ product managers receiving monthly updates on:</h4>
+      <h4 class="font-normal">Join 60,000+ product managers receiving monthly updates on:</h4>
     
-      <ul class="flex flex-col">
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
+      <ul>
+        <li class="flex flex-row gap-4"><img src="../../assets/images/icon-list.svg"></img>Product discovery and building what matters</li>
+        <li class="flex flex-row my-3 gap-4"><img src="../../assets/images/icon-list.svg">Measuring to ensure updates are a success</li>
+        <li class="flex flex-row mb-3 gap-4"><img src="../../assets/images/icon-list.svg">And much more!</li>
       </ul>
     
-      <label>Email address</label>
-      <input type="email">
+      <div class="w-full">
+        <label class="text-sm font-bold">Email address</label>
+        <input type="email" class="border border-gray-200 p-3 rounded-xl w-full" placeholder="email@company.com">
+      </div>
       <br>
-      <button>Subscribe to monthly newsletter</button>
+      <button class="w-full bg-dark-grey text-white py-5 rounded-xl font-bold">Subscribe to monthly newsletter</button>
     </div>
     <div id="image-container">
       <img src="../../assets/images/illustration-sign-up-desktop.svg" alt="Graphic showing web page and graph.">

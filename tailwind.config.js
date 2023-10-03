@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif']
+      }, 
+      colors: {
+        "dark-grey": 'hsl(234, 29%, 20%)'
       }
     },
   },
