@@ -28,7 +28,7 @@
         <input type="email" class="border border-gray-200 p-3 rounded-lg w-full focus:border-black focus:ring-0 focus:outline-none" placeholder="email@company.com">
       </div>
       <br>
-      <button class="w-full bg-dark-grey text-white py-5 rounded-lg font-bold hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato hover:cursor-pointer">Subscribe to monthly newsletter</button>
+      <button id="subscribe" class="w-full bg-dark-grey text-white py-5 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Subscribe to monthly newsletter</button>
     </div>
     <div id="image-container">
       <img src="../../assets/images/illustration-sign-up-desktop.svg" alt="Graphic showing web page and graph.">
@@ -39,14 +39,41 @@
 
   <!-- Success message start -->
 
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
+  <div id="thanks-container" class="flex flex-row bg-white justify-around py-12 px-14 rounded-xl m-auto w-1/2 md:3/5 lg:w-1/4 hidden">
+    <div id="info-container" class="flex flex-col gap-7">
+      <div id="img-container">
+        <img src="../../assets/images/icon-success.svg">
+      </div>
+      <h1 class="text-[3rem] leading-[1.0] text-dark-grey font-bold">
+        Thanks for subscribing!
+      </h1>
+    
+      <p>
+        A confirmation email has been sent to <b>ash@loremcompany.com.</b> 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    
+      <button id="dismiss" class="w-full bg-dark-grey text-white py-5 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Dismiss Message</button>
+    </div>
+  </div>
+  
 
   <!-- Success message end -->
+<script>
+  const subscribeButton = document.getElementById('subscribe')
+  const dismissButton = document.getElementById('dismiss')
+  const mainContainer = document.getElementById('container')
+  const thanksContainer = document.getElementById('thanks-container')
 
+  subscribeButton.addEventListener('click', () => {
+    mainContainer.classList.add('hidden')
+    thanksContainer.classList.remove('hidden')
+  })
+
+  dismissButton.addEventListener('click', () => {
+    thanksContainer.classList.add('hidden')
+    mainContainer.classList.remove('hidden')
+  })
+</script>
 </body>
 </html>
