@@ -11,9 +11,12 @@
 <body class="bg-[#36384d] flex h-screen font-roboto">
 
   <!-- Sign-up form start -->
-  <div id="container" class="flex flex-row bg-white justify-around p-5 rounded-xl m-auto">
-    <div id="text-container" class="flex flex-col gap-5 items-start px-10 py-16 w-1/2">
-      <h1 class="text-[3rem] font-bold text-dark-grey">Stay Updated!</h1>
+  <div id="container" class="block sm:flex sm:flex-row bg-white justify-around p-0 sm:p-5 rounded-xl m-auto">
+    <div id="image-container" class="sm:hidden">
+      <img class="w-full" src="../../assets/images/illustration-sign-up-mobile.svg" alt="Graphic showing web page and graph.">
+    </div>
+    <div id="text-container" class="flex flex-col gap-5 items-start px-10 py-8 sm:py-16 sm:w-1/2">
+      <h1 class="text-4xl sm:text-[3rem] font-bold text-dark-grey">Stay Updated!</h1>
 
       <h4 class="font-normal">Join 60,000+ product managers receiving monthly updates on:</h4>
     
@@ -30,7 +33,7 @@
       <br>
       <button id="subscribe" class="w-full bg-dark-grey text-white py-5 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Subscribe to monthly newsletter</button>
     </div>
-    <div id="image-container">
+    <div id="image-container" class="hidden sm:block m-auto">
       <img src="../../assets/images/illustration-sign-up-desktop.svg" alt="Graphic showing web page and graph.">
     </div>
   </div>
@@ -39,12 +42,12 @@
 
   <!-- Success message start -->
 
-  <div id="thanks-container" class="flex flex-row bg-white justify-around py-12 px-14 rounded-xl m-auto w-1/2 md:3/5 lg:w-1/4 hidden">
+  <div id="thanks-container" class="flex flex-row bg-white justify-around h-screen py-40 px-5 sm:py-12 sm:px-14 rounded-xl sm:w-1/2 md:3/5 lg:w-1/4 hidden">
     <div id="info-container" class="flex flex-col gap-7">
       <div id="img-container">
         <img src="../../assets/images/icon-success.svg">
       </div>
-      <h1 class="text-[3rem] leading-[1.0] text-dark-grey font-bold">
+      <h1 class="text-4xl text-[3rem] leading-[1.0] text-dark-grey font-bold">
         Thanks for subscribing!
       </h1>
     
@@ -53,7 +56,7 @@
         Please open it and click the button inside to confirm your subscription.
       </p>
     
-      <button id="dismiss" class="w-full bg-dark-grey text-white py-5 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Dismiss Message</button>
+      <button id="dismiss" class="w-full bg-dark-grey text-white py-5 mt-52 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Dismiss Message</button>
     </div>
   </div>
   
