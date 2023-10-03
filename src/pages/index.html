@@ -42,7 +42,7 @@
 
   <!-- Success message start -->
 
-  <div id="thanks-container" style="display: none;" class="flex flex-row bg-white justify-around h-screen py-40 px-5 sm:py-12 sm:px-14 rounded-xl sm:w-1/2 md:3/5 lg:w-1/4">
+  <div id="thanks-container" style="display: none;" class="flex flex-row bg-white justify-around py-40 m-auto px-5 sm:py-12 sm:px-14 rounded-xl sm:w-1/2 md:2/5 lg:w-1/3">
     <div id="info-container" class="flex flex-col gap-7">
       <div id="img-container">
         <img src="../../assets/images/icon-success.svg">
@@ -56,7 +56,7 @@
         Please open it and click the button inside to confirm your subscription.
       </p>
     
-      <button id="dismiss" class="w-full bg-dark-grey text-white py-5 mt-52 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Dismiss Message</button>
+      <button id="dismiss" class="w-full bg-dark-grey text-white py-5 mt-52 sm:mt-0 rounded-lg font-bold transition-all hover:bg-gradient-to-r from-tomato via-tomato to-light-tomato duration-200 hover:cursor-pointer">Dismiss Message</button>
     </div>
   </div>
   
@@ -70,11 +70,11 @@
 
   subscribeButton.addEventListener('click', () => {
     mainContainer.style.display = "none";
-    thanksContainer.classList.remove('hidden')
+    thanksContainer.style.display = "flex"
   })
 
   dismissButton.addEventListener('click', () => {
-    thanksContainer.classList.add('hidden')
+    thanksContainer.style.display = "none"
     mainContainer.style.display = "flex"
   })
 </script>
