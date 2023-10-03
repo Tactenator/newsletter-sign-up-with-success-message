@@ -11,7 +11,7 @@
 <body class="bg-[#36384d] flex h-screen font-roboto">
 
   <!-- Sign-up form start -->
-  <div id="container" class="block sm:flex sm:flex-row bg-white justify-around p-0 sm:p-5 rounded-xl m-auto">
+  <div id="container" class="sm:flex sm:flex-row bg-white justify-around p-0 sm:p-5 rounded-xl m-auto">
     <div id="image-container" class="sm:hidden">
       <img class="w-full" src="../../assets/images/illustration-sign-up-mobile.svg" alt="Graphic showing web page and graph.">
     </div>
@@ -42,7 +42,7 @@
 
   <!-- Success message start -->
 
-  <div id="thanks-container" class="flex flex-row bg-white justify-around h-screen py-40 px-5 sm:py-12 sm:px-14 rounded-xl sm:w-1/2 md:3/5 lg:w-1/4 hidden">
+  <div id="thanks-container" style="display: none;" class="flex flex-row bg-white justify-around h-screen py-40 px-5 sm:py-12 sm:px-14 rounded-xl sm:w-1/2 md:3/5 lg:w-1/4">
     <div id="info-container" class="flex flex-col gap-7">
       <div id="img-container">
         <img src="../../assets/images/icon-success.svg">
@@ -69,13 +69,13 @@
   const thanksContainer = document.getElementById('thanks-container')
 
   subscribeButton.addEventListener('click', () => {
-    mainContainer.classList.add('hidden')
+    mainContainer.style.display = "none";
     thanksContainer.classList.remove('hidden')
   })
 
   dismissButton.addEventListener('click', () => {
     thanksContainer.classList.add('hidden')
-    mainContainer.classList.remove('hidden')
+    mainContainer.style.display = "flex"
   })
 </script>
 </body>
